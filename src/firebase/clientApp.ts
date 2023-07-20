@@ -1,7 +1,7 @@
 import { initializeApp, getApp, getApps } from "firebase/app";
-import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
-import { getStorage } from 'firebase/storage'
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 import { initialize } from "next/dist/server/lib/render-server";
 
@@ -16,10 +16,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase for SSR
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
-const firestore = getFirestore(app)
-const auth = getAuth(app)
-const storage = getStorage(app)
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const firestore = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
 
-export { app, firestore, auth, storage }
-
+export { app, firestore, auth, storage };
